@@ -1,4 +1,4 @@
-package cn.com.bsfit.frms.policy.cfg;
+package cn.com.bsfit.frms.policy.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;

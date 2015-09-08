@@ -1,4 +1,4 @@
-package cn.com.bsfit.frms.policy.cfg;
+package cn.com.bsfit.frms.policy.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -30,7 +30,6 @@ public class PortalDatasourceConfig {
     public SqlSessionFactory portalSqlSessionFactory(@Qualifier("portalDataSource") DataSource portalDataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(portalDataSource);
-        bean.setConfigLocation(new ClassPathResource("PortalMybatisConfig_oracle.xml"));
         bean.setConfigLocation(new ClassPathResource("PortalMybatisConfig_" + portalJdbcType + ".xml"));
         return bean.getObject();
     }

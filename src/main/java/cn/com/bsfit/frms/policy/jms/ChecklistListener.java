@@ -25,7 +25,6 @@ import cn.com.bsfit.frms.obj.AuditObject;
 import cn.com.bsfit.frms.obj.AuditResult;
 import cn.com.bsfit.frms.obj.MemCachedItem;
 import cn.com.bsfit.frms.obj.Risk;
-import cn.com.bsfit.frms.policy.jms.util.SessionAwareBatchMessageListener;
 import cn.com.bsfit.frms.policy.mapper.portal.ResourcesMapper;
 import cn.com.bsfit.frms.policy.mapper.portal.RiskLevelMapper;
 import cn.com.bsfit.frms.policy.mapper.rams.ChecklistHisMapper;
@@ -34,6 +33,7 @@ import cn.com.bsfit.frms.policy.mapper.rams.ChecklistRisksMapper;
 import cn.com.bsfit.frms.policy.pojo.rams.Checklist;
 import cn.com.bsfit.frms.policy.pojo.rams.ChecklistHis;
 import cn.com.bsfit.frms.policy.pojo.rams.ChecklistRisks;
+import cn.com.bsfit.frms.policy.utils.SessionAwareBatchMessageListener;
 
 /**
  * 监听核查单队列里的消息
@@ -42,7 +42,7 @@ import cn.com.bsfit.frms.policy.pojo.rams.ChecklistRisks;
 @Component
 public class ChecklistListener extends MessageListenerAdapter implements SessionAwareBatchMessageListener<TextMessage> {
 
-    Logger logger = LoggerFactory.getLogger(ChecklistListener.class);
+    private Logger logger = LoggerFactory.getLogger(ChecklistListener.class);
 
     @Autowired
     private SqlSessionFactory sqlSessionFactory;
