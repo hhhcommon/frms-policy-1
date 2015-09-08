@@ -1,0 +1,11 @@
+11:01:07.394 38451 [batchMessageListener-1] ERROR c.c.b.f.p.jms.ChecklistListener - An error occurred when saving data
+java.lang.NullPointerException: null
+	at cn.com.bsfit.frms.policy.jms.ChecklistListener.saveChecklist(ChecklistListener.java:134) ~[classes/:na]
+	at cn.com.bsfit.frms.policy.jms.ChecklistListener.onMessages(ChecklistListener.java:84) ~[classes/:na]
+	at cn.com.bsfit.frms.policy.jms.util.BatchMessageListenerContainer.doExecuteListener(BatchMessageListenerContainer.java:161) [classes/:na]
+	at cn.com.bsfit.frms.policy.jms.util.BatchMessageListenerContainer.doReceiveAndExecute(BatchMessageListenerContainer.java:104) [classes/:na]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263) [spring-jms-4.0.7.RELEASE.jar:4.0.7.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1102) [spring-jms-4.0.7.RELEASE.jar:4.0.7.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1094) [spring-jms-4.0.7.RELEASE.jar:4.0.7.RELEASE]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:991) [spring-jms-4.0.7.RELEASE.jar:4.0.7.RELEASE]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]

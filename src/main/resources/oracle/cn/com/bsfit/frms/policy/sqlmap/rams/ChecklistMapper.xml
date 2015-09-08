@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.bsfit.frms.policy.mapper.rams.ChecklistMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.bsfit.frms.policy.pojo.rams.Checklist" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="ORDER_ID" property="orderId" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="TRANS_VOL" property="transVol" jdbcType="DECIMAL" />
+    <result column="RISK_LEVEL" property="riskLevel" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="OPER_USER_ID" property="operUserId" jdbcType="DECIMAL" />
+    <result column="VERIFI_STRATEGY" property="verifiStrategy" jdbcType="VARCHAR" />
+    <result column="NOTIFY_STRATEGY" property="notifyStrategy" jdbcType="VARCHAR" />
+    <result column="SCORE" property="score" jdbcType="DECIMAL" />
+    <result column="PAY_USER_ID" property="payUserId" jdbcType="VARCHAR" />
+    <result column="REC_USER_ID" property="recUserId" jdbcType="VARCHAR" />
+    <result column="PAY_BANK_CARD_NO" property="payBankCardNo" jdbcType="VARCHAR" />
+    <result column="REC_TERMINAL_ID" property="recTerminalId" jdbcType="VARCHAR" />
+    <result column="REDUNDANT_FIELDS_1" property="redundantFields1" jdbcType="VARCHAR" />
+    <result column="REDUNDANT_FIELDS_2" property="redundantFields2" jdbcType="VARCHAR" />
+    <result column="REDUNDANT_FIELDS_3" property="redundantFields3" jdbcType="VARCHAR" />
+    <result column="CONTROL" property="control" jdbcType="VARCHAR" />
+    <result column="BIZ_CODE" property="bizCode" jdbcType="VARCHAR" />
+    <result column="FRMS_DATA_TYPE" property="frmsDataType" jdbcType="VARCHAR" />
+    <result column="FRMS_TRANS_TIME" property="frmsTransTime" jdbcType="TIMESTAMP" />
+    <result column="FRMS_TRANS_VOL" property="frmsTransVol" jdbcType="DECIMAL" />
+    <result column="FRMS_OPER_STATUS" property="frmsOperStatus" jdbcType="VARCHAR" />
+    <result column="FRMS_ORDER_CHNL" property="frmsOrderChnl" jdbcType="VARCHAR" />
+    <result column="FRMS_ORDER_TYPE" property="frmsOrderType" jdbcType="VARCHAR" />
+    <result column="FRMS_TRADE_MODE" property="frmsTradeMode" jdbcType="VARCHAR" />
+    <result column="FRMS_TRADE_TYPE" property="frmsTradeType" jdbcType="VARCHAR" />
+    <result column="FRMS_USER_ID" property="frmsUserId" jdbcType="VARCHAR" />
+    <result column="FRMS_USER_ID_CARD" property="frmsUserIdCard" jdbcType="VARCHAR" />
+    <result column="FRMS_USER_TYPE" property="frmsUserType" jdbcType="VARCHAR" />
+    <result column="FRMS_BANK_CARD_NO" property="frmsBankCardNo" jdbcType="VARCHAR" />
+    <result column="FRMS_COL_NAME" property="frmsColName" jdbcType="VARCHAR" />
+    <result column="FRMS_COL_CARD_NO" property="frmsColCardNo" jdbcType="VARCHAR" />
+    <result column="FRMS_OPER_NO" property="frmsOperNo" jdbcType="VARCHAR" />
+    <result column="FRMS_USER_NAME" property="frmsUserName" jdbcType="VARCHAR" />
+    <result column="FRMS_PAY_DETAIL" property="frmsPayDetail" jdbcType="VARCHAR" />
+    <result column="FRMS_TRADE_FROM" property="frmsTradeFrom" jdbcType="VARCHAR" />
+    <result column="FRMS_TRADE_DEPART" property="frmsTradeDepart" jdbcType="VARCHAR" />
+    <result column="FRMS_COL_CUST_ACCT" property="frmsColCustAcct" jdbcType="VARCHAR" />
+    <result column="FRMS_FRE_ID" property="frmsFreId" jdbcType="VARCHAR" />
+    <result column="FRMS_SERIALS_NO" property="frmsSerialsNo" jdbcType="VARCHAR" />
+    <result column="FRMS_BANK_CARD_TYPE" property="frmsBankCardType" jdbcType="VARCHAR" />
+    <result column="FRMS_CRY_TYPE" property="frmsCryType" jdbcType="VARCHAR" />
+    <result column="FRMS_BILL_FLAY" property="frmsBillFlay" jdbcType="VARCHAR" />
+    <result column="FRMS_TRADE_SRC" property="frmsTradeSrc" jdbcType="VARCHAR" />
+    <result column="FRMS_MERCH_SEQ" property="frmsMerchSeq" jdbcType="VARCHAR" />
+    <result column="FRMS_MERCH_STAT" property="frmsMerchStat" jdbcType="VARCHAR" />
+    <result column="FRMS_CDHP_BH" property="frmsCdhpBh" jdbcType="VARCHAR" />
+    <result column="FRMS_DUE_DATE" property="frmsDueDate" jdbcType="VARCHAR" />
+    <result column="FRMS_TRANS_STATUS" property="frmsTransStatus" jdbcType="VARCHAR" />
+    <result column="FRMS_CDHP_STATUS" property="frmsCdhpStatus" jdbcType="VARCHAR" />
+    <result column="FRMS_CDHP_AMT" property="frmsCdhpAmt" jdbcType="VARCHAR" />
+    <result column="FRMS_COMPANY_NAME" property="frmsCompanyName" jdbcType="VARCHAR" />
+    <result column="FRMS_OPER_NAME" property="frmsOperName" jdbcType="VARCHAR" />
+    <result column="FRMS_SIGN_DATE_NET" property="frmsSignDateNet" jdbcType="VARCHAR" />
+    <result column="FRMS_SIGN_DATE_MOB" property="frmsSignDateMob" jdbcType="VARCHAR" />
+    <result column="FRMS_SIGN_MOB_NUM" property="frmsSignMobNum" jdbcType="VARCHAR" />
+    <result column="CHECKLIST_TYPE" property="checklistType" jdbcType="DECIMAL" />
+    <result column="FRMS_MERCH_NAME" property="frmsMerchName" jdbcType="VARCHAR" />
+    <result column="RULES_CODE" property="rulesCode" jdbcType="VARCHAR" />
+    <result column="FRMS_CUST_NAME" property="frmsCustName" jdbcType="VARCHAR" />
+    <result column="FRMS_USER_PHONE" property="frmsUserPhone" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, ORDER_ID, CREATE_TIME, UPDATE_TIME, TRANS_VOL, RISK_LEVEL, STATUS, OPER_USER_ID, 
+    VERIFI_STRATEGY, NOTIFY_STRATEGY, SCORE, PAY_USER_ID, REC_USER_ID, PAY_BANK_CARD_NO, 
+    REC_TERMINAL_ID, REDUNDANT_FIELDS_1, REDUNDANT_FIELDS_2, REDUNDANT_FIELDS_3, CONTROL, 
+    BIZ_CODE, FRMS_DATA_TYPE, FRMS_TRANS_TIME, FRMS_TRANS_VOL, FRMS_OPER_STATUS, FRMS_ORDER_CHNL, 
+    FRMS_ORDER_TYPE, FRMS_TRADE_MODE, FRMS_TRADE_TYPE, FRMS_USER_ID, FRMS_USER_ID_CARD, 
+    FRMS_USER_TYPE, FRMS_BANK_CARD_NO, FRMS_COL_NAME, FRMS_COL_CARD_NO, FRMS_OPER_NO, 
+    FRMS_USER_NAME, FRMS_PAY_DETAIL, FRMS_TRADE_FROM, FRMS_TRADE_DEPART, FRMS_COL_CUST_ACCT, 
+    FRMS_FRE_ID, FRMS_SERIALS_NO, FRMS_BANK_CARD_TYPE, FRMS_CRY_TYPE, FRMS_BILL_FLAY, 
+    FRMS_TRADE_SRC, FRMS_MERCH_SEQ, FRMS_MERCH_STAT, FRMS_CDHP_BH, FRMS_DUE_DATE, FRMS_TRANS_STATUS, 
+    FRMS_CDHP_STATUS, FRMS_CDHP_AMT, FRMS_COMPANY_NAME, FRMS_OPER_NAME, FRMS_SIGN_DATE_NET, 
+    FRMS_SIGN_DATE_MOB, FRMS_SIGN_MOB_NUM, CHECKLIST_TYPE, FRMS_MERCH_NAME, RULES_CODE,
+    FRMS_CUST_NAME, FRMS_USER_PHONE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from CHECKLIST
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <insert id="insert" parameterType="cn.com.bsfit.frms.policy.pojo.rams.Checklist">
+    <selectKey resultType="long" order="BEFORE" keyProperty="id">
+      SELECT CHECKLIST_SEQ.nextval as ID from DUAL
+    </selectKey>
+    insert into CHECKLIST (ID, ORDER_ID, CREATE_TIME, 
+      UPDATE_TIME, TRANS_VOL, RISK_LEVEL, 
+      STATUS, OPER_USER_ID, VERIFI_STRATEGY, 
+      NOTIFY_STRATEGY, SCORE, PAY_USER_ID, 
+      REC_USER_ID, PAY_BANK_CARD_NO, REC_TERMINAL_ID, 
+      REDUNDANT_FIELDS_1, REDUNDANT_FIELDS_2, REDUNDANT_FIELDS_3, 
+      CONTROL, BIZ_CODE, FRMS_DATA_TYPE, 
+      FRMS_TRANS_TIME, FRMS_TRANS_VOL, FRMS_OPER_STATUS, 
+      FRMS_ORDER_CHNL, FRMS_ORDER_TYPE, FRMS_TRADE_MODE, 
+      FRMS_TRADE_TYPE, FRMS_USER_ID, FRMS_USER_ID_CARD, 
+      FRMS_USER_TYPE, FRMS_BANK_CARD_NO, FRMS_COL_NAME, 
+      FRMS_COL_CARD_NO, FRMS_OPER_NO, FRMS_USER_NAME, 
+      FRMS_PAY_DETAIL, FRMS_TRADE_FROM, FRMS_TRADE_DEPART, 
+      FRMS_COL_CUST_ACCT, FRMS_FRE_ID, FRMS_SERIALS_NO, 
+      FRMS_BANK_CARD_TYPE, FRMS_CRY_TYPE, FRMS_BILL_FLAY, 
+      FRMS_TRADE_SRC, FRMS_MERCH_SEQ, FRMS_MERCH_STAT, 
+      FRMS_CDHP_BH, FRMS_DUE_DATE, FRMS_TRANS_STATUS, 
+      FRMS_CDHP_STATUS, FRMS_CDHP_AMT, FRMS_COMPANY_NAME, 
+      FRMS_OPER_NAME, FRMS_SIGN_DATE_NET, FRMS_SIGN_DATE_MOB, 
+      FRMS_SIGN_MOB_NUM, CHECKLIST_TYPE, FRMS_MERCH_NAME, RULES_CODE,FRMS_CUST_NAME, FRMS_USER_PHONE
+      )
+    values (#{id,jdbcType=DECIMAL}, #{orderId,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{transVol,jdbcType=DECIMAL}, #{riskLevel,jdbcType=DECIMAL}, 
+      #{status,jdbcType=DECIMAL}, #{operUserId,jdbcType=DECIMAL}, #{verifiStrategy,jdbcType=VARCHAR}, 
+      #{notifyStrategy,jdbcType=VARCHAR}, #{score,jdbcType=DECIMAL}, #{payUserId,jdbcType=VARCHAR}, 
+      #{recUserId,jdbcType=VARCHAR}, #{payBankCardNo,jdbcType=VARCHAR}, #{recTerminalId,jdbcType=VARCHAR}, 
+      #{redundantFields1,jdbcType=VARCHAR}, #{redundantFields2,jdbcType=VARCHAR}, #{redundantFields3,jdbcType=VARCHAR}, 
+      #{control,jdbcType=VARCHAR}, #{bizCode,jdbcType=VARCHAR}, #{frmsDataType,jdbcType=VARCHAR}, 
+      #{frmsTransTime,jdbcType=TIMESTAMP}, #{frmsTransVol,jdbcType=DECIMAL}, #{frmsOperStatus,jdbcType=VARCHAR}, 
+      #{frmsOrderChnl,jdbcType=VARCHAR}, #{frmsOrderType,jdbcType=VARCHAR}, #{frmsTradeMode,jdbcType=VARCHAR}, 
+      #{frmsTradeType,jdbcType=VARCHAR}, #{frmsUserId,jdbcType=VARCHAR}, #{frmsUserIdCard,jdbcType=VARCHAR}, 
+      #{frmsUserType,jdbcType=VARCHAR}, #{frmsBankCardNo,jdbcType=VARCHAR}, #{frmsColName,jdbcType=VARCHAR}, 
+      #{frmsColCardNo,jdbcType=VARCHAR}, #{frmsOperNo,jdbcType=VARCHAR}, #{frmsUserName,jdbcType=VARCHAR}, 
+      #{frmsPayDetail,jdbcType=VARCHAR}, #{frmsTradeFrom,jdbcType=VARCHAR}, #{frmsTradeDepart,jdbcType=VARCHAR}, 
+      #{frmsColCustAcct,jdbcType=VARCHAR}, #{frmsFreId,jdbcType=VARCHAR}, #{frmsSerialsNo,jdbcType=VARCHAR}, 
+      #{frmsBankCardType,jdbcType=VARCHAR}, #{frmsCryType,jdbcType=VARCHAR}, #{frmsBillFlay,jdbcType=VARCHAR}, 
+      #{frmsTradeSrc,jdbcType=VARCHAR}, #{frmsMerchSeq,jdbcType=VARCHAR}, #{frmsMerchStat,jdbcType=VARCHAR}, 
+      #{frmsCdhpBh,jdbcType=VARCHAR}, #{frmsDueDate,jdbcType=VARCHAR}, #{frmsTransStatus,jdbcType=VARCHAR}, 
+      #{frmsCdhpStatus,jdbcType=VARCHAR}, #{frmsCdhpAmt,jdbcType=VARCHAR}, #{frmsCompanyName,jdbcType=VARCHAR}, 
+      #{frmsOperName,jdbcType=VARCHAR}, #{frmsSignDateNet,jdbcType=VARCHAR}, #{frmsSignDateMob,jdbcType=VARCHAR}, 
+      #{frmsSignMobNum,jdbcType=VARCHAR}, #{checklistType,jdbcType=DECIMAL}, #{frmsMerchName,jdbcType=VARCHAR},
+      #{rulesCode,jdbcType=VARCHAR}, #{frmsCustName,jdbcType=VARCHAR}, #{frmsUserPhone,jdbcType=VARCHAR}
+      )
+  </insert>
+
+  <insert id="insertChecklistRiskType" parameterType="cn.com.bsfit.frms.policy.pojo.rams.Checklist" >
+    insert into CHECKLIST_RISKTYPE (CHECKLIST_ID, RISK_TYPE_VALUE)
+    values (#{checklistId,jdbcType=DECIMAL}, #{riskTypeValue,jdbcType=VARCHAR})
+  </insert>
+</mapper>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.bsfit.frms.policy.mapper.portal.ResourcesMapper">
+    <select id="selectUserByResourceCode" resultType="long">
+        select distinct a.users_id from users_roles a
+        inner join ROLES_RESOURCES b on a.roles_id=b.roles_id
+        inner join RESOURCES c on b.resources_id=c.id
+        where c.resource_code=#{resourceCode}
+  </select>
+</mapper>
