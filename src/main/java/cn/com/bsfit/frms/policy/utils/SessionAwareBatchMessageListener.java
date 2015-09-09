@@ -1,7 +1,6 @@
 package cn.com.bsfit.frms.policy.utils;
 
 import java.util.List;
-import java.util.concurrent.Callable;
 
 import javax.jms.JMSException;
 import javax.jms.Message;

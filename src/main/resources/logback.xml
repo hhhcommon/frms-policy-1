@@ -5,7 +5,7 @@
 		<encoder>
 			<!-- 输出格式 -->
 			<pattern>
-				%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+				%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
 			</pattern>
 		</encoder>
 	</appender>
@@ -18,7 +18,7 @@
 			<fileNamePattern>log/error/error-%d{yyyy-MM-dd}.log.gz</fileNamePattern>  
 		</rollingPolicy>  
 		<encoder>  
-			<pattern>%d{HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>  
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>  
 		</encoder>
 		<!-- error级别过滤器 -->
 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -34,7 +34,7 @@
 			<fileNamePattern>log/info/info-%d{yyyy-MM-dd}.log.gz</fileNamePattern>  
 		</rollingPolicy>  
 		<encoder>  
-			<pattern>%d{HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>  
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>  
 		</encoder>
 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
 			<level>INFO</level>  

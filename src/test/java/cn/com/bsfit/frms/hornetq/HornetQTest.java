@@ -1,7 +1,5 @@
 package cn.com.bsfit.frms.hornetq;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Properties;
 
 import javax.jms.Connection;
@@ -21,17 +19,14 @@ import org.hornetq.jms.client.HornetQConnection;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
-import cn.com.bsfit.frms.policy.CheckListTest;
-
 public class HornetQTest {
 
 	private static final String HORNETQ_PROVIDER_URL = "jnp://127.0.0.1:10099";
 	private static final String INITIAL_CONTEXT_FACTORY = "org.jnp.interfaces.NamingContextFactory";
 	private static final String FACTORY_URL_PKGS = "org.jboss.naming:org.jnp.interfaces";
 	
-	public static void main(String[] args) throws NamingException, JMSException, SQLException {
-		ResultSet re = CheckListTest.getChecklistResultSet();
-		final String text = JSON.toJSONString(re,
+	public static void main(String[] args) throws NamingException, JMSException {
+		final String text = JSON.toJSONString(null,
 				SerializerFeature.BrowserCompatible,
 				SerializerFeature.WriteClassName,
 				SerializerFeature.DisableCircularReferenceDetect);

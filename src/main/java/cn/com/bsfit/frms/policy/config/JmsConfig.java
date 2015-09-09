@@ -90,9 +90,12 @@ public class JmsConfig {
 		container.setDestinationName(destinationName);
 		container.setMessageListener(checklistListener);
 		// container.setSessionTransacted(false);
-		container.setConcurrentConsumers(concurrentConsumers);
-		container.setConcurrency(concurrency);
-		container.setMaxConcurrentConsumers(maxConcurrentConsumers);
+		// 设置固定的线程数
+		// container.setConcurrentConsumers(concurrentConsumers);
+		// 设置动态的线程数
+		// container.setConcurrency(concurrency);
+		// 设置最大的线程数
+		// container.setMaxConcurrentConsumers(maxConcurrentConsumers);
 		return container;
 	}
 }
