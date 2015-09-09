@@ -32,6 +32,13 @@ public class JmsConfig {
     @Value("${destinationName:FrmsRiskArchiveQueue}")
     private String destinationName;
     
+    @Value("${concurrentConsumers:4}")
+    private int concurrentConsumers;
+    @Value("${concurrency:2-5}")
+    private String concurrency;
+    @Value("${maxConcurrentConsumers:6}")
+    private int maxConcurrentConsumers;
+    
     @Bean
     public JndiTemplate jndiTemplate() {
         Properties prop = new Properties();
@@ -82,6 +89,10 @@ public class JmsConfig {
 		container.setConnectionFactory(cachingConnectionFactory);
 		container.setDestinationName(destinationName);
 		container.setMessageListener(checklistListener);
+		// container.setSessionTransacted(false);
+		container.setConcurrentConsumers(concurrentConsumers);
+		container.setConcurrency(concurrency);
+		container.setMaxConcurrentConsumers(maxConcurrentConsumers);
 		return container;
 	}
 }

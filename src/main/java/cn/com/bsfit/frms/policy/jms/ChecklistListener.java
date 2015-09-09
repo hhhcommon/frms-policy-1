@@ -51,12 +51,12 @@ public class ChecklistListener extends MessageListenerAdapter implements Session
 
 	@SuppressWarnings("unchecked")
 	public void onMessages(Session session, List<TextMessage> messages) throws JMSException {
+		System.out.println("在onMessage中线程ID是" + Thread.currentThread());
 		if (messages == null || messages.size() == 0) {
 			logger.warn("No messages available!");
 			return;
 		}
-		logger.info("ChecklistListener received {} msgs", messages.size());
-		logger.debug("ChecklistListener received msgs: {}", messages.toString());
+		// logger.info("ChecklistListener received {} msgs", messages.size());
 		SqlSession sqlSession;
 		if (ramsJdbcType.equals("oracle")) {
 			sqlSession = sqlSessionFactory.openSession(ExecutorType.BATCH, false);
@@ -83,7 +83,7 @@ public class ChecklistListener extends MessageListenerAdapter implements Session
 						// 保存风险触发时的缓存状态，因为第一期行为信息暂时不做，保留方法 TODO
 						saveMemCachedItem(mItems, sqlSession);
 						sqlSession.commit();
-						logger.debug("Save the data {} successfully", publishObj);
+						// logger.info("save the data {} successfully", publishObj);
 					}
 				}
 			}
@@ -188,5 +188,4 @@ public class ChecklistListener extends MessageListenerAdapter implements Session
 	public void saveMemCachedItem(List<MemCachedItem> mItems, SqlSession sqlSession) {
 
 	}
-
 }

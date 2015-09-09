@@ -1,9 +1,11 @@
 package cn.com.bsfit.frms.policy.utils;
 
+import java.util.List;
+import java.util.concurrent.Callable;
+
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
-import java.util.List;
 
 /**
  * 主要用于批量消费消息
